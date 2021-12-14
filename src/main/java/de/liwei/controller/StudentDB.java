@@ -83,9 +83,9 @@ public void randomStudent(){
 
     //Methode : ersetze die List durch eine Map
     public Map<Integer, Student> studentMap(Student stu){
-        Map<Integer, Student> allStudentHashMap = new HashMap<>();
-        allStudentHashMap.put(stu.getStudentId(),stu);
-        return allStudentHashMap;
+        Map<Integer, Student> allStudentMap = new HashMap<>();
+        allStudentMap.put(stu.getStudentId(),stu);
+        return allStudentMap;
     }
 
 }

@@ -6,6 +6,11 @@ public class Student {
      int alt;
 
     //Constructor
+
+
+    public Student() {
+    }
+
     public Student(String name, int studentId, int alt) {
         this.name = name;
         this.studentId = studentId;

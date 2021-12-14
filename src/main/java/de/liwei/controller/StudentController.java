@@ -1,12 +1,32 @@
 package de.liwei.controller;
 
 
+import de.liwei.IStudentService;
 import de.liwei.model.Student;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("student")
 public class StudentController {
+//Felder:
+    private final IStudentService service;
+
+//Constructor:
+    public StudentController(IStudentService service) {
+        this.service = service;
+    }
+
+public List<Student> getStudents(){
+   return   service.getStudents();
+}
+
+//    @GetMapping()
+//    public void getStudents(){
+//        service.getStudents();
+//    }
+
 
     @GetMapping
     public Student getStudent(){
@@ -42,6 +62,8 @@ public class StudentController {
         }
         return "nicht gefunden";
     }
+
+
 
 
 

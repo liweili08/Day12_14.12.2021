@@ -4,6 +4,7 @@ import de.liwei.model.Student;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
 
 public class StudentDB {
 
@@ -81,11 +82,11 @@ public void randomStudent(){
 
 
     //Methode : ersetze die List durch eine Map
-    public void List() {
-        HashMap<Integer, Student> studentHashMap = new HashMap<>();
-        for (int i = 0; i < this.studentArray.length; i++) {
-            studentHashMap.put(i,this.studentArray[i]);
-        }
+    public Map<Integer, Student> studentMap(Student stu){
+        Map<Integer, Student> allStudentHashMap = new HashMap<>();
+        allStudentHashMap.put(stu.getStudentId(),stu);
+        return allStudentHashMap;
     }
+
 }
 
